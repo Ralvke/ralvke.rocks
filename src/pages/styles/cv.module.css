@@ -1,0 +1,37 @@
+.container {
+  width: 720px;
+  margin: 64px auto;
+  padding: 0 64px;
+  font-weight: 500;
+}
+
+.header h2 {
+  margin: 0 0 0.6rem;
+}
+.header h3 {
+  margin: 0;
+}
+
+.block {
+  margin-top: 32px;
+}
+.block h3 {
+  margin: 0 0 0.8rem;
+}
+.block h4 {
+  margin: 0.6rem 0;
+  font-weight: 500;
+}
+.block p {
+  margin: 0;
+}
+.block ul {
+  list-style: square;
+}
+.block li {
+  margin: 0.5rem 0;
+}
+
+.links {
+  margin-top: 48px;
+}

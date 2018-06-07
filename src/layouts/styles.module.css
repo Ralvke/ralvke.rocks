@@ -1,4 +1,14 @@
-@import "modern-normalize/modern-normalize.css";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700");
 
-.container {
+@value color-background, color-text from "./theme.module.css";
+
+body {
+  background: color-background;
+  font-family: "Roboto Mono", monospace;
+  font-size: 17px;
+  color: color-text;
+}
+
+p {
+  line-height: 1.5rem;
 }

@@ -1,13 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import {container, page} from "./styles.module.css"
+import "modern-normalize/modern-normalize.css"
+import "../static/icons/style.css"
+import "./styles.module.css"
 
-const Layout = ({children}) => (
-  <div className={container}>
-    <div className={page}>{children()}</div>
-  </div>
-)
+const Layout = ({children}) => children()
 
 Layout.propTypes = {
   children: PropTypes.func

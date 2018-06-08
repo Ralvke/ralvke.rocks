@@ -24,7 +24,7 @@ const cvLinks = [
   {icon: "envelop", to: "mailto:ralvke@gmail.com"}
 ]
 const indexLinks = [
-  {icon: "profile", to: "https://cv.ralvke.rocks"},
+  {icon: "profile", to: "/cv"},
   ...cvLinks,
   {icon: "twitter", to: "https://twitter.com/ralvke"}
 ]

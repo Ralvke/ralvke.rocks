@@ -3,7 +3,7 @@ MAINTAINER Maxim Lisw <ralvke@gmail.com>
 
 WORKDIR /tmp
 COPY package.json yarn.lock /tmp/
-RUN yarn install --pure-lockfile
+RUN yarn install
 
 RUN rm -rf /usr/src/app/public
 WORKDIR /usr/src/app

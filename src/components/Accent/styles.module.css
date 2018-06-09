@@ -1,5 +1,0 @@
-@value color-accent from "../../layouts/theme.module.css";
-
-.accent {
-  color: color-accent;
-}

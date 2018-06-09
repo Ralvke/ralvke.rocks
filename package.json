@@ -3,19 +3,42 @@
   "description": "ralvke.rocks site",
   "version": "1.0.0",
   "author": "Maxim Lisw <ralvke@gmail.com>",
+  "sideEffects": false,
+  "scripts": {
+    "watch": "webpack-serve --mode=development",
+    "build": "webpack --mode=production"
+  },
   "dependencies": {
     "classnames": "^2.2.5",
-    "modern-normalize": "^0.4.0",
-    "react-helmet": "^5.2.0"
+    "hyperapp": "^1.2.6"
   },
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/plugin-transform-react-jsx": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
     "@octetstream/eslint-config": "^2.1.0",
+    "babel-loader": "^8.0.0-beta",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-import-resolver-babel-module": "5.0.0-beta.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
-    "prettier": "^1.12.0"
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "postcss": "^6.0.22",
+    "postcss-loader": "^2.1.5",
+    "postcss-nested": "^3.0.0",
+    "postcss-normalize": "^5.0.0",
+    "postcss-preset-env": "^5.1.0",
+    "prettier": "^1.12.0",
+    "style-loader": "^0.21.0",
+    "sugarss": "^1.0.1",
+    "webpack": "^4.12.0",
+    "webpack-command": "^0.2.1",
+    "webpack-serve": "^1.0.4"
   }
 }

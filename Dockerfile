@@ -1,12 +1,11 @@
-FROM node:alpine
+FROM node:latest
 MAINTAINER Maxim Lisw <ralvke@gmail.com>
 
-WORKDIR /tmp
-COPY package.json yarn.lock /tmp/
-RUN yarn install
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
-RUN rm -rf /usr/src/app/dist
+RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
-COPY . /usr/src/app/
-RUN cp -a /tmp/node_modules /usr/src/app/
+COPY . /usr/src/app
+
+RUN yarn install --frozen-lockfile --no-cache
 RUN yarn build

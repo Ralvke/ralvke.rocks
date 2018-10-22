@@ -1,19 +1,14 @@
 import React, {StrictMode} from "react"
 import {render} from "react-dom"
-import styled from "astroturf"
 
-const Title = styled("h1")`
-  color: var(--accent-color);
-`
-
-const SubTitle = styled("h2")`
-  background: var(--background-color);
-`
+import Layout from "components/Layout"
+import HomePage from "pages/Home"
 
 const Wrap = () => (
   <StrictMode>
-    <Title>Its works</Title>
-    <SubTitle>sub title</SubTitle>
+    <Layout>
+      <HomePage />
+    </Layout>
   </StrictMode>
 )
 

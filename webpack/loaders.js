@@ -20,6 +20,10 @@ const loaders = mode => [
     ]
   },
   {
+    test: /\.svg$/,
+    loader: "@svgr/webpack"
+  },
+  {
     test: /\.(png|jpg|gif|eot|ttf|woff|otf|woff2)$/,
     loader: "file-loader",
     options: {

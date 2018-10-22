@@ -1,39 +1,31 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
-const cssRules = mode => [
-  mode === "development" ? "style-loader" : MiniCssExtractPlugin.loader,
+const loaders = mode => [
   {
-    loader: "css-loader",
-    options: {
-      modules: true,
-      importLoaders: 1,
-      minimize: mode === "production",
-      sourceMap: mode === "development",
-      localIdentName: "[name]__[local]__[hash:base64:8]"
-    }
-  }
-]
-
-module.exports = mode => [
-  {
-    test: /\.(js|jsx)$/,
+    test: /\.js$/,
     exclude: /node_modules/,
     loader: "babel-loader"
   },
   {
-    test: /\.(png|jpg|gif|eot|ttf|woff|otf|woff2|svg)$/,
-    loader: "file-loader",
-    options: {name: "[name].[hash:8].[ext]"}
+    test: /\.jsx$/,
+    exclude: /node_modules/,
+    use: ["babel-loader", "astroturf/loader"]
   },
   {
-    test: /\.sss$/,
+    test: /\.css$/,
     use: [
-      ...cssRules(mode),
+      mode === "development" ? "style-loader" : MiniCssExtractPlugin.loader,
+      "astroturf/css-loader",
       "postcss-loader"
     ]
   },
   {
-    test: /\.css$/,
-    use: cssRules(mode)
+    test: /\.(png|jpg|gif|eot|ttf|woff|otf|woff2)$/,
+    loader: "file-loader",
+    options: {
+      name: "[name].[hash:8].[ext]"
+    }
   }
 ]
+
+module.exports = loaders

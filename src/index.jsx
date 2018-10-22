@@ -1,18 +1,22 @@
-import {app} from "hyperapp"
+import React, {StrictMode} from "react"
+import {render} from "react-dom"
+import styled from "astroturf"
 
-import picoRouter from "etc/picoRouter"
-import IndexPage from "pages/Index"
-import CvPage from "pages/CV"
-import NotFound from "pages/NotFound"
+const Title = styled("h1")`
+  color: var(--accent-color);
+`
 
-import "static/icons/style.css"
-import "styles/main.sss"
+const SubTitle = styled("h2")`
+  background: var(--background-color);
+`
 
-const routes = {
-  "/": IndexPage,
-  "/cv": CvPage
-}
+const Wrap = () => (
+  <StrictMode>
+    <Title>Its works</Title>
+    <SubTitle>sub title</SubTitle>
+  </StrictMode>
+)
 
-const route = picoRouter(routes, NotFound)
+render(<Wrap />, document.getElementById("wrap"))
 
-app({}, {}, route, document.getElementById("wrap"))
+if (module.hot) module.hot.accept()

@@ -1,0 +1,11 @@
+@import "./vars.css";
+@import-normalize;
+
+:global {
+  html, body, #wrap {
+    height: 100%;
+  }
+  body {
+    background: var(--background-color);
+  }
+}

@@ -1,7 +1,16 @@
 {
-  "presets": ["@babel/env"],
+  "presets": ["@babel/react", "@babel/env"],
   "plugins": [
-    ["@babel/transform-react-jsx", {"pragma": "h"}],
-    ["module-resolver", {"root": ["src"]}]
-  ]
+    ["@babel/proposal-decorators", {"legacy": true}],
+    ["@babel/proposal-class-properties", {"loose": true}],
+    "@babel/proposal-object-rest-spread",
+    "@babel/proposal-do-expressions",
+    "@babel/proposal-optional-chaining",
+  ],
+  "env": {
+    "production": {
+      "plugins": ["transform-react-remove-prop-types"],
+      "presets": ["minify"]
+    }
+  }
 }

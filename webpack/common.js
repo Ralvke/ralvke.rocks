@@ -1,4 +1,7 @@
 const {resolve} = require("path")
+const convert = require("koa-connect")
+const history = require("connect-history-api-fallback")
+// const proxy = require("http-proxy-middleware")
 
 const output = mode => {
   const isDev = mode === "development"
@@ -6,26 +9,32 @@ const output = mode => {
 
   return {
     filename,
+    publicPath: "/",
     path: resolve("dist")
   }
 }
 
-const optimization = mode => {
-  if (mode === "development") {
-    return {}
-  }
+const devTool = mode => mode === "development" ? "source-map" : false
 
-  return {
-    runtimeChunk: {
-      name: "runtime"
-    },
-    splitChunks: {
-      chunks: "all"
-    }
+const devServer = () => ({
+  port: 3200,
+  host: "0.0.0.0",
+  add: app => app.use(convert(history())),
+})
+
+const optimization = () => ({
+  splitChunks: {
+    chunks: "all",
+    automaticNameDelimiter: "."
+  },
+  runtimeChunk: {
+    name: "runtime"
   }
-}
+})
 
 module.exports = {
   output,
-  optimization
+  devTool,
+  devServer,
+  optimization,
 }

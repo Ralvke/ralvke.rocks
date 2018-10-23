@@ -9,7 +9,7 @@ import TelegramIcon from "static/icons/telegram.svg"
 import TwitterIcon from "static/icons/twitter.svg"
 import EmailIcon from "static/icons/email.svg"
 
-const cvLink = {icon: <CvIcon />, to: ""}
+const cvLink = {icon: <CvIcon />, to: "/cv"}
 const links = [
   {icon: <GitHubIcon />, to: "https://github.com/ralvke"},
   {icon: <TelegramIcon />, to: "https://t.me/ralvke"},
@@ -21,7 +21,7 @@ const Links = styled("div")`
   display: flex;
 
   > * {
-    margin: 0 16px;
+    margin: 0 12px;
   }
 `
 

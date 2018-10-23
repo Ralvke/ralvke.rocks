@@ -2,12 +2,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 const loaders = mode => [
   {
-    test: /\.js$/,
-    exclude: /node_modules/,
-    loader: "babel-loader"
-  },
-  {
-    test: /\.jsx$/,
+    test: /\.(js|jsx)$/,
     exclude: /node_modules/,
     use: ["babel-loader", "astroturf/loader"]
   },
@@ -22,6 +17,10 @@ const loaders = mode => [
   {
     test: /\.svg$/,
     loader: "@svgr/webpack"
+  },
+  {
+    test: /\.md$/,
+    use: ["babel-loader", "@mdx-js/loader"]
   },
   {
     test: /\.(png|jpg|gif|eot|ttf|woff|otf|woff2)$/,

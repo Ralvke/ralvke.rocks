@@ -8,7 +8,7 @@ const styles = css`
     outline: none;
 
     svg {
-      width: 48px;
+      width: 36px;
       fill: var(--text-gray-color);
       transition: fill .3s ease-out;
     }

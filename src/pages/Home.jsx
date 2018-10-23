@@ -3,26 +3,24 @@ import styled, {css} from "astroturf"
 
 import ContactLinks from "components/ContactLinks"
 
+const styles = css`
+  .links {
+    margin-top: 16px;
+  }
+`
+
 const Container = styled("div")`
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-`
-
-const Title = styled("h1")`
-  margin: 0;
-`
-
-const styles = css`
-  .links {
-    margin-top: 32px;
-  }
+  justify-content: center;
 `
 
 const HomePage = () => (
   <Container>
-    <Title>Maxim Lisw</Title>
-    <h3>Fullstack developer</h3>
+    <h1>Maxim Lisw</h1>
     <ContactLinks withCv className={styles.links} />
   </Container>
 )

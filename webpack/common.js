@@ -1,7 +1,7 @@
 const {resolve} = require("path")
 const convert = require("koa-connect")
 const history = require("connect-history-api-fallback")
-// const proxy = require("http-proxy-middleware")
+const TerserPlugin = require("terser-webpack-plugin")
 
 const output = mode => {
   const isDev = mode === "development"
@@ -23,6 +23,7 @@ const devServer = () => ({
 })
 
 const optimization = () => ({
+  minimizer: [new TerserPlugin()],
   splitChunks: {
     chunks: "all",
     automaticNameDelimiter: "."

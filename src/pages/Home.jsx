@@ -20,7 +20,7 @@ const Container = styled("div")`
 
 const HomePage = () => (
   <Container>
-    <h1>Maxim Lisw</h1>
+    <h1>Max Eliseev</h1>
     <ContactLinks withCv className={styles.links} />
   </Container>
 )

@@ -1,11 +1,10 @@
-# Maxim Lisw
+# Max Eliseev
 ## Fullstack developer
 
 ### Bio
 I am Maxim, a Fullstack developer. I had experienced
 high performance backend and system development with *Rust* and
 frontend with *React*. Also I have some *UI/UX* and *DevOps* skills.
-"Lisw" is a pseudonym.
 
 ### Base info
 Experience: 3 years  

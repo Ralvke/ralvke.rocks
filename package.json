@@ -1,0 +1,17 @@
+{
+  "name": "ralvke.rocks",
+  "private": true,
+  "description": "ralvke.rocks site",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "serve": "gatsby serve"
+  },
+  "dependencies": {
+    "gatsby": "^2.0.118",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  }
+}

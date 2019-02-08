@@ -1,0 +1,12 @@
+{
+  "plugins": ["react"],
+  "extends": ["airbnb"],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "quotes": ["error", "double"],
+    "semi": ["error", "never"]
+  }
+}

@@ -10,16 +10,21 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "gatsby": "^2.0.118",
+    "modern-normalize": "^0.5.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.0",
-    "react-dom": "^16.8.0"
+    "react-dom": "^16.8.0",
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "eslint": "^5.13.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.12.4",
+    "gatsby-plugin-react-helmet": "^3.0.6",
+    "gatsby-plugin-react-svg": "^2.0.0-beta1"
   }
 }

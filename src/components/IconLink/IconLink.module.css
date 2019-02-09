@@ -1,0 +1,10 @@
+.icon {
+  width: 36px;
+}
+.icon * {
+  fill: #bbb;
+  transition: fill .3s ease-out;
+}
+.container:hover .icon * {
+  fill: #fff;
+}

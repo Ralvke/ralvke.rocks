@@ -1,7 +1,6 @@
 import React from "react"
 import {element, arrayOf, oneOfType} from "prop-types"
 
-import "./global.css"
 import {container} from "./Layout.module.css"
 
 const Layout = ({children}) => (

@@ -1,10 +1,10 @@
 import React from "react"
 import {Helmet} from "react-helmet"
 
-import {links, cvLink} from "../../links"
-import LinkList from "../../components/LinkList"
-import {withLayout} from "../../components/Layout"
-import {container, links as linksClassName} from "./IndexPage.module.css"
+import {links, cvLink} from "../links"
+import LinkList from "../components/LinkList"
+import {withLayout} from "../components/Layout"
+import {container, links as linksClassName} from "./index.module.css"
 
 const indexLinks = [cvLink].concat(links)
 

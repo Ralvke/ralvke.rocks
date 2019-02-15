@@ -9,6 +9,11 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "classnames": "^2.2.6",
     "gatsby": "^2.0.118",
@@ -28,6 +33,8 @@
     "eslint-plugin-react": "^7.12.4",
     "gatsby-mdx": "^0.3.5",
     "gatsby-plugin-react-helmet": "^3.0.6",
-    "gatsby-plugin-react-svg": "^2.0.0-beta1"
+    "gatsby-plugin-react-svg": "^2.0.0-beta1",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.4"
   }
 }

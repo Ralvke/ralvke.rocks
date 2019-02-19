@@ -1,5 +1,5 @@
 import React from "react"
-import {element, arrayOf, oneOfType} from "prop-types"
+import {node} from "prop-types"
 
 import {container} from "./Layout.module.css"
 
@@ -8,7 +8,7 @@ const Layout = ({children}) => (
 )
 
 Layout.propTypes = {
-  children: oneOfType([element, arrayOf(element)]).isRequired
+  children: node.isRequired
 }
 
 const withLayout = Target => props => (

@@ -1,11 +1,6 @@
 import React from "react"
 import {Link as GatsbyLink} from "gatsby"
-import {
-  element,
-  string,
-  arrayOf,
-  oneOfType
-} from "prop-types"
+import {string, node} from "prop-types"
 
 const Link = ({to, children, ...props}) => {
   const isInternal = /^\/(?!\/)/.test(to)
@@ -19,7 +14,7 @@ const Link = ({to, children, ...props}) => {
 
 Link.propTypes = {
   to: string.isRequired,
-  children: oneOfType([string, element, arrayOf(element)]).isRequired
+  children: node.isRequired
 }
 
 export default Link

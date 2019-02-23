@@ -13,6 +13,9 @@ const Index = () => (
     <Helmet title="Max Eliseev" />
     <h1>Max Eliseev</h1>
     <LinkList links={indexLinks} className={linksClassName} />
+    <p>
+      <a href="pubkey.txt">F2B4 7838 414D 672A A95D 9F5F 17B0 FDF4 5DE0 8DDB</a>
+    </p>
   </div>
 )
 

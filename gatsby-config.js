@@ -8,6 +8,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-react-svg",
     "gatsby-mdx",
+    "gatsby-plugin-csp",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
